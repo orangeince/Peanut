@@ -16,6 +16,10 @@
 		F54E9A4821BD05E00059C631 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E9A4721BD05E00059C631 /* App.swift */; };
 		F54E9A4A21BD08030059C631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54E9A4921BD08030059C631 /* Main.storyboard */; };
 		F54E9A4C21BD10F20059C631 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E9A4B21BD10F20059C631 /* WordCell.swift */; };
+		F5CEA97221C3F8BD00B2569F /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEA97121C3F8BD00B2569F /* CardViewController.swift */; };
+		F5CEA97E21C4017700B2569F /* WordCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEA97C21C4017700B2569F /* WordCardCell.swift */; };
+		F5CEA97F21C4017700B2569F /* WordCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5CEA97D21C4017700B2569F /* WordCardCell.xib */; };
+		F5CEA98121C407F300B2569F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CEA98021C407F300B2569F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		F54E9A4721BD05E00059C631 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		F54E9A4921BD08030059C631 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F54E9A4B21BD10F20059C631 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		F5CEA97121C3F8BD00B2569F /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		F5CEA97C21C4017700B2569F /* WordCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardCell.swift; sourceTree = "<group>"; };
+		F5CEA97D21C4017700B2569F /* WordCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCardCell.xib; sourceTree = "<group>"; };
+		F5CEA98021C407F300B2569F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,6 @@
 				E530842B1E31C7E8A5469094 /* Pods-Peanut.debug.xcconfig */,
 				2AA529004B3296D710001735 /* Pods-Peanut.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +101,10 @@
 				F54E9A4721BD05E00059C631 /* App.swift */,
 				F54E9A4921BD08030059C631 /* Main.storyboard */,
 				F54E9A4B21BD10F20059C631 /* WordCell.swift */,
+				F5CEA97121C3F8BD00B2569F /* CardViewController.swift */,
+				F5CEA97C21C4017700B2569F /* WordCardCell.swift */,
+				F5CEA97D21C4017700B2569F /* WordCardCell.xib */,
+				F5CEA98021C407F300B2569F /* Extensions.swift */,
 			);
 			path = Peanut;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 				F54E9A4A21BD08030059C631 /* Main.storyboard in Resources */,
 				F54E9A3E21BCE2920059C631 /* LaunchScreen.storyboard in Resources */,
 				F54E9A3B21BCE2920059C631 /* Assets.xcassets in Resources */,
+				F5CEA97F21C4017700B2569F /* WordCardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54E9A3621BCE2900059C631 /* ItemsViewController.swift in Sources */,
+				F5CEA97E21C4017700B2569F /* WordCardCell.swift in Sources */,
 				F54E9A4821BD05E00059C631 /* App.swift in Sources */,
+				F5CEA98121C407F300B2569F /* Extensions.swift in Sources */,
+				F5CEA97221C3F8BD00B2569F /* CardViewController.swift in Sources */,
 				F54E9A4C21BD10F20059C631 /* WordCell.swift in Sources */,
 				F54E9A3421BCE2900059C631 /* AppDelegate.swift in Sources */,
 				F54E9A4621BD05200059C631 /* Word.swift in Sources */,
