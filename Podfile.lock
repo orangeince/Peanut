@@ -1,0 +1,16 @@
+PODS:
+  - VerticalCardSwiper (0.1.0-beta6)
+
+DEPENDENCIES:
+  - VerticalCardSwiper (= 0.1.0-beta6)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - VerticalCardSwiper
+
+SPEC CHECKSUMS:
+  VerticalCardSwiper: abf970a63426e6fb77bcc55d3ca589ff54d0ef00
+
+PODFILE CHECKSUM: 520f44449b7787bd0b9e5bbc4bdeb56a271bca10
+
+COCOAPODS: 1.6.0.beta.2
