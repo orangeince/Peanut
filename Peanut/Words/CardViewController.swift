@@ -18,6 +18,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         self.words = words
         self.didSelectedWord = didSelectedWord
         super.init(nibName: nil, bundle: nil)
+        title = "Words"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,7 +27,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.init(40)
+        view.backgroundColor = .white//UIColor.init(240)
         
         cardSwiper = VerticalCardSwiper(frame: self.view.bounds)
         cardSwiper.isSideSwipingEnabled = false
@@ -46,7 +47,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "WordCell", for: index) as! WordCardCell
-        //cardCell.setRandomBackgroundColor()
+        cardCell.setRandomBackgroundColor()
         cardCell.wordLabel.text = words[index].content
         return cardCell
     }
