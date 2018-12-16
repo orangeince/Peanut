@@ -48,7 +48,6 @@ class SettingsViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
-        tableView.backgroundColor = UIColor(240)
         tableView.separatorColor = UIColor(240)
         tableView.register(SettingItemCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self
@@ -57,7 +56,6 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupSubviews()
     }
 }
@@ -97,6 +95,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        switch sections[indexPath.section][indexPath.row] {
+        case .theme:
+            let vc = ThemeSettingViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            return
+        }
     }
 }
 

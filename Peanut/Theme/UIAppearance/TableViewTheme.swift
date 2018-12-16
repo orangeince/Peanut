@@ -29,3 +29,19 @@ extension UITableView: Themeable {
         backgroundColor = theme.backgroundColor
     }
 }
+
+public struct CollectionViewTheme: Theme {
+    let backgroundColor: UIColor
+    
+    init(palette: Palette) {
+        backgroundColor = palette.colors.dynamic.weakBackground
+    }
+}
+
+extension UICollectionView: Themeable {
+    public typealias Theme = CollectionViewTheme
+    
+    public func apply(theme: Theme) {
+        backgroundColor = theme.backgroundColor
+    }
+}

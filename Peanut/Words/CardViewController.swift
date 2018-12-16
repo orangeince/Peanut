@@ -8,6 +8,7 @@
 
 import UIKit
 import VerticalCardSwiper
+import Gestalt
 
 class CardViewController: UIViewController, VerticalCardSwiperDatasource, VerticalCardSwiperDelegate {
     fileprivate var words: [Word]
@@ -35,8 +36,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.init(240)
-        
+
         cardSwiper = VerticalCardSwiper(frame: self.view.bounds)
         cardSwiper.isSideSwipingEnabled = false
         view.addSubview(cardSwiper)
@@ -51,6 +51,8 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         
         //cardSwiper.register(WordCardCell.self, forCellWithReuseIdentifier: "card")
         cardSwiper.register(nib: UINib(nibName: "WordCardCell", bundle: nil), forCellWithReuseIdentifier: "WordCell")
+        
+        observe(theme: \AppTheme.collectionView)
     }
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
@@ -71,4 +73,10 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     
 }
 
-
+extension CardViewController: Themeable {
+    typealias Theme = CollectionViewTheme
+    
+    func apply(theme: Theme) {
+        view.backgroundColor = theme.backgroundColor
+    }
+}

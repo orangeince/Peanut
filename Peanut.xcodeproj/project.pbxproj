@@ -37,6 +37,7 @@
 		F57BAC4121C652EE009D8F56 /* ToolBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */; };
 		F57BAC4321C6545C009D8F56 /* TableViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */; };
 		F57BAC4521C65542009D8F56 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4421C65542009D8F56 /* AppTheme.swift */; };
+		F57BAC4721C65CCB009D8F56 /* ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4621C65CCB009D8F56 /* ThemeSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarTheme.swift; sourceTree = "<group>"; };
 		F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTheme.swift; sourceTree = "<group>"; };
 		F57BAC4421C65542009D8F56 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		F57BAC4621C65CCB009D8F56 /* ThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */,
 				F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */,
+				F57BAC4621C65CCB009D8F56 /* ThemeSettingViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				F57BAC2A21C647B4009D8F56 /* UIFont+Extension.swift in Sources */,
 				F516D08421C4F0F800E3B2E7 /* App.swift in Sources */,
 				F516D08C21C4F19B00E3B2E7 /* WordCardCell.swift in Sources */,
+				F57BAC4721C65CCB009D8F56 /* ThemeSettingViewController.swift in Sources */,
 				F57BAC2021C60C9B009D8F56 /* WordStore.swift in Sources */,
 				F57BAC2621C642C9009D8F56 /* Palette.swift in Sources */,
 				F57BAC3121C6486F009D8F56 /* SystemFont.swift in Sources */,
