@@ -16,12 +16,21 @@ final class App {
     init(window: UIWindow) {
         let wordsVC = CardViewController(wordStore: WordStore.shared, didSelectedWord: showInterpretation)
         wordNavigation = UINavigationController(rootViewController: wordsVC)
-        wordNavigation.tabBarItem = UITabBarItem(title: "word", image: nil, selectedImage: nil)
+        let wordBar = UITabBarItem(title: nil,
+                                   image: UIImage(named: "tab_word_light"),
+                                   selectedImage: UIImage(named: "tab_word_se_light"))
+        wordBar.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+        wordNavigation.tabBarItem = wordBar
         
         let settings = SettingsViewController()
+        settings.title = "Settings"
         let settingsNav = UINavigationController(rootViewController: settings)
-        settingsNav.tabBarItem = UITabBarItem(title: "Settings", image: nil, selectedImage: nil)
-        
+        let settingsBar = UITabBarItem(title: nil,
+                                       image: UIImage(named: "tab_settings_light"),
+                                       selectedImage: UIImage(named: "tab_settings_se_light"))
+        settingsBar.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
+        settingsNav.tabBarItem = settingsBar
+
         tabBarController = UITabBarController()
         tabBarController.setViewControllers([wordNavigation, settingsNav], animated: false)
         window.rootViewController = tabBarController
