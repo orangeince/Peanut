@@ -38,6 +38,11 @@
 		F57BAC4321C6545C009D8F56 /* TableViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */; };
 		F57BAC4521C65542009D8F56 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4421C65542009D8F56 /* AppTheme.swift */; };
 		F57BAC4721C65CCB009D8F56 /* ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4621C65CCB009D8F56 /* ThemeSettingViewController.swift */; };
+		F57BAC4921C67B46009D8F56 /* AppIconTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4821C67B46009D8F56 /* AppIconTheme.swift */; };
+		F57BAC4B21C67E07009D8F56 /* app_icon_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC4A21C67E07009D8F56 /* app_icon_dark@3x.png */; };
+		F57BAC4D21C67E0D009D8F56 /* app_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC4C21C67E0D009D8F56 /* app_icon_dark@2x.png */; };
+		F57BAC4F21C67E2C009D8F56 /* app_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC4E21C67E2C009D8F56 /* app_icon_light@2x.png */; };
+		F57BAC5121C67E34009D8F56 /* app_icon_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC5021C67E34009D8F56 /* app_icon_light@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +81,11 @@
 		F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTheme.swift; sourceTree = "<group>"; };
 		F57BAC4421C65542009D8F56 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		F57BAC4621C65CCB009D8F56 /* ThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettingViewController.swift; sourceTree = "<group>"; };
+		F57BAC4821C67B46009D8F56 /* AppIconTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconTheme.swift; sourceTree = "<group>"; };
+		F57BAC4A21C67E07009D8F56 /* app_icon_dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_dark@3x.png"; sourceTree = "<group>"; };
+		F57BAC4C21C67E0D009D8F56 /* app_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_dark@2x.png"; sourceTree = "<group>"; };
+		F57BAC4E21C67E2C009D8F56 /* app_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_light@2x.png"; sourceTree = "<group>"; };
+		F57BAC5021C67E34009D8F56 /* app_icon_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_light@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,10 @@
 		F516D09121C4F1B100E3B2E7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				F57BAC4A21C67E07009D8F56 /* app_icon_dark@3x.png */,
+				F57BAC4C21C67E0D009D8F56 /* app_icon_dark@2x.png */,
+				F57BAC4E21C67E2C009D8F56 /* app_icon_light@2x.png */,
+				F57BAC5021C67E34009D8F56 /* app_icon_light@3x.png */,
 				F516D09221C4F1B100E3B2E7 /* Assets.xcassets */,
 				F516D09321C4F1B100E3B2E7 /* LaunchScreen.storyboard */,
 				F516D09521C4F1B100E3B2E7 /* Main.storyboard */,
@@ -225,6 +239,7 @@
 				F57BAC3E21C65120009D8F56 /* TabBarTheme.swift */,
 				F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */,
 				F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */,
+				F57BAC4821C67B46009D8F56 /* AppIconTheme.swift */,
 			);
 			path = UIAppearance;
 			sourceTree = "<group>";
@@ -335,10 +350,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57BAC4F21C67E2C009D8F56 /* app_icon_light@2x.png in Resources */,
 				F516D08F21C4F19B00E3B2E7 /* WordCardCell.xib in Resources */,
+				F57BAC4D21C67E0D009D8F56 /* app_icon_dark@2x.png in Resources */,
 				F516D09B21C4F1B100E3B2E7 /* Main.storyboard in Resources */,
 				F516D09A21C4F1B100E3B2E7 /* LaunchScreen.storyboard in Resources */,
 				F516D09921C4F1B100E3B2E7 /* Assets.xcassets in Resources */,
+				F57BAC5121C67E34009D8F56 /* app_icon_light@3x.png in Resources */,
+				F57BAC4B21C67E07009D8F56 /* app_icon_dark@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57BAC4921C67B46009D8F56 /* AppIconTheme.swift in Sources */,
 				F57BAC3921C6490E009D8F56 /* AssetPalette.swift in Sources */,
 				F57BAC2A21C647B4009D8F56 /* UIFont+Extension.swift in Sources */,
 				F516D08421C4F0F800E3B2E7 /* App.swift in Sources */,

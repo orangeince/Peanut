@@ -8,16 +8,15 @@
 
 import Gestalt
 
-struct AppTheme: Theme {
+public struct AppTheme: Theme {
     let id: Int
     let navigationBar: NavigationBarTheme
     let tabBar: TabBarTheme
     let toolBar: ToolBarTheme
     let tableView: TableViewTheme
     let collectionView: CollectionViewTheme
-    
-    let appIconName: String
-    
+    let appIcon: AppIconTheme
+
     static let `default`: AppTheme = .light
     
     static let light: AppTheme = .init(palette: .light, id: 0)
@@ -28,28 +27,15 @@ struct AppTheme: Theme {
         tabBar = .init(palette: palette)
         toolBar = .init(palette: palette)
         tableView = .init(palette: palette)
-        appIconName = palette.assets.appIcon.iconName
         collectionView = .init(palette: palette)
+        appIcon = .init(palette: palette)
         self.id = id
     }
 }
 
 extension AppTheme: Equatable {
-    static func == (lhs: AppTheme, rhs: AppTheme) -> Bool {
+    public static func == (lhs: AppTheme, rhs: AppTheme) -> Bool {
         return lhs.id == rhs.id
     }
 }
 
-extension UIApplication {
-    typealias Theme = AppTheme
-    
-    func apply(theme: Theme) {
-        setAlternateIconName(theme.appIconName) { (error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("change icon succeed!")
-            }
-        }
-    }
-}

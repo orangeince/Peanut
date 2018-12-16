@@ -17,16 +17,18 @@ public struct NavigationBarTheme: Theme {
     let isTranslucent: Bool
     let backgroundImage: UIImage?
     let shadowImage: UIImage?
+    let backgroundColor: UIColor
     
     
     init(palette: Palette) {
         self.barStyle = palette.styles.barStyle
         self.titleFont = palette.fonts.static.navigationBarTitle
-        self.titleColor = palette.colors.dynamic.primary
+        self.titleColor = palette.colors.dynamic.foreground
         self.tintColor = palette.colors.dynamic.tint
         self.isTranslucent = palette.styles.barTranslucency
         backgroundImage = palette.styles.barBackground
         shadowImage = palette.styles.barShadowImage
+        backgroundColor = palette.colors.dynamic.background
     }
 }
 
@@ -34,15 +36,15 @@ extension UINavigationBar: Themeable {
     public typealias Theme = NavigationBarTheme
     
     public func apply(theme: Theme) {
-        self.barStyle = theme.barStyle
-        self.titleTextAttributes = [
+        barStyle = theme.barStyle
+        titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: theme.titleColor,
             NSAttributedString.Key.font: theme.titleFont
         ]
-        
-        self.isTranslucent = theme.isTranslucent
-        self.tintColor = theme.tintColor
-        self.setBackgroundImage(theme.backgroundImage, for: .default)
-        self.shadowImage = theme.shadowImage
+        isTranslucent = theme.isTranslucent
+        tintColor = theme.tintColor
+        setBackgroundImage(theme.backgroundImage, for: .default)
+        shadowImage = theme.shadowImage
+        backgroundColor = theme.backgroundColor
     }
 }

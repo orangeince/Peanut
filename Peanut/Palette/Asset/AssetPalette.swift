@@ -44,9 +44,9 @@ struct TabbarAssetPalette: PaletteProtocol {
 
 struct AppIconPalette: PaletteProtocol {
     let iconName: String
-    static let light: AppIconPalette = .init(iconName: "AppIcon")
-    static let dark: AppIconPalette = .init(iconName: "AppIcon_black")
-    static let debug: AppIconPalette = .init(iconName: "AppIcon")
+    static let light: AppIconPalette = .init(iconName: "lightIcon")
+    static let dark: AppIconPalette = .init(iconName: "darkIcon")
+    static let debug: AppIconPalette = .init(iconName: "lightIcon")
 }
 
 struct AssetPalette: PaletteProtocol {

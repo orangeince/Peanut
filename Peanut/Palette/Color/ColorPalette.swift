@@ -51,7 +51,7 @@ struct ColorPalette: PaletteProtocol {
         ),
         dynamic: .init(
             foreground: .white,
-            background: .black,
+            background: UIColor(hue:0.635, saturation:0.1, brightness:0.1, alpha:1), // near black,
             weakBackground: UIColor(33),
 
             primary: UIColor(hue:0.121, saturation:0.144, brightness:0.793, alpha:1), // light gray

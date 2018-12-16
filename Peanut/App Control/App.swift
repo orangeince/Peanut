@@ -68,7 +68,8 @@ final class App {
             UITabBar.observe(theme: \Theme.tabBar) { $0.appearance() },
             UITableView.observe(theme: \Theme.tableView) { $0.appearance() },
             UICollectionView.observe(theme: \Theme.collectionView) { $0.appearance() },
-            UIToolbar.observe(theme: \Theme.toolBar) { $0.appearance() },
+            UIToolbar.observe(theme: \Theme.toolBar) { $0.appearance() }
         ]
+        UIApplication.shared.observe(theme: \Theme.appIcon)
     }
 }

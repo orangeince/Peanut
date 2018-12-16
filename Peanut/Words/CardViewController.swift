@@ -57,7 +57,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "WordCell", for: index) as! WordCardCell
-        //cardCell.setRandomBackgroundColor()
+        cardCell.setRandomBackgroundColor()
         cardCell.wordLabel.text = words[index].content
         return cardCell
     }
