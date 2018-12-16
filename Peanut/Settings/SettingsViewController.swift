@@ -11,7 +11,11 @@ import UIKit
 class SettingsViewController: UIViewController {
     enum SettingItem: String {
         case theme = "Theme"
+        
         case api = "API configure"
+        case sync = "Sync from iCloud"
+        case clean = "Clean up"
+        
         case about = "About peanut"
         case mail = "Mail to supporter"
     }
@@ -24,7 +28,7 @@ class SettingsViewController: UIViewController {
         public static var allCases: [Section] {
             return [
                 .general([.theme]),
-                .data([.api]),
+                .data([.api, .sync, .clean]),
                 .other([.about, .mail])
             ]
         }
@@ -88,6 +92,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let item = sections[indexPath.section][indexPath.row]
         cell.textLabel?.text = item.rawValue
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     

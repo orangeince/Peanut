@@ -22,6 +22,7 @@
 		F516D0A321C4F26D00E3B2E7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516D0A221C4F26D00E3B2E7 /* ItemsViewController.swift */; };
 		F57BAC1C21C4F51C009D8F56 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */; };
 		F57BAC1E21C5014D009D8F56 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */; };
+		F57BAC2021C60C9B009D8F56 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1F21C60C9B009D8F56 /* WordStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F54E9A3021BCE2900059C631 /* Peanut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peanut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
+		F57BAC1F21C60C9B009D8F56 /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				F516D08121C4F0F800E3B2E7 /* AppDelegate.swift */,
 				F516D08221C4F0F800E3B2E7 /* App.swift */,
+				F57BAC1F21C60C9B009D8F56 /* WordStore.swift */,
 			);
 			path = "App Control";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				F516D08421C4F0F800E3B2E7 /* App.swift in Sources */,
 				F516D08C21C4F19B00E3B2E7 /* WordCardCell.swift in Sources */,
+				F57BAC2021C60C9B009D8F56 /* WordStore.swift in Sources */,
 				F516D08321C4F0F800E3B2E7 /* AppDelegate.swift in Sources */,
 				F516D08E21C4F19B00E3B2E7 /* Word.swift in Sources */,
 				F516D08B21C4F19B00E3B2E7 /* CardViewController.swift in Sources */,

@@ -10,15 +10,23 @@ import UIKit
 import VerticalCardSwiper
 
 class CardViewController: UIViewController, VerticalCardSwiperDatasource, VerticalCardSwiperDelegate {
-    let words: [Word]
+    fileprivate var words: [Word]
     let didSelectedWord: ((Word) -> Void)?
     private var cardSwiper: VerticalCardSwiper!
 
-    init(words: [Word], didSelectedWord: ((Word) -> Void)?) {
-        self.words = words
+    init(wordStore: WordStore, didSelectedWord: ((Word) -> Void)?) {
+        self.words = wordStore.words
         self.didSelectedWord = didSelectedWord
         super.init(nibName: nil, bundle: nil)
         title = "Words"
+        
+        wordStore.didChangedWords = { [weak self] words in
+            guard let `self` = self else {
+                return
+            }
+            self.words = words
+            self.cardSwiper.reloadData()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -14,16 +14,7 @@ final class App {
     var wordNavigation: UINavigationController!
 
     init(window: UIWindow) {
-        let words = [
-            Word(content: "peanut", createdAt: Date()),
-            Word(content: "prefer", createdAt: Date()),
-            Word(content: "physical", createdAt: Date())
-        ]
-//        let wordsVC = ItemsViewController(items: words) { (cell: WordCell, word) in
-//            cell.textLabel?.text = word.content
-//            cell.detailTextLabel?.text = word.createdAt.formattedString()
-//        }
-        let wordsVC = CardViewController(words: words, didSelectedWord: showInterpretation)
+        let wordsVC = CardViewController(wordStore: WordStore.shared, didSelectedWord: showInterpretation)
         wordNavigation = UINavigationController(rootViewController: wordsVC)
         wordNavigation.tabBarItem = UITabBarItem(title: "word", image: nil, selectedImage: nil)
         
