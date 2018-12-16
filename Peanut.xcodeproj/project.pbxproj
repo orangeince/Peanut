@@ -445,7 +445,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E530842B1E31C7E8A5469094 /* Pods-Peanut.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_black;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RD23MG297;
 				INFOPLIST_FILE = "Peanut/Support Files/Info.plist";
@@ -464,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AA529004B3296D710001735 /* Pods-Peanut.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_black;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RD23MG297;
 				INFOPLIST_FILE = "Peanut/Support Files/Info.plist";
