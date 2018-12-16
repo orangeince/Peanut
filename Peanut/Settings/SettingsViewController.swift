@@ -48,8 +48,8 @@ class SettingsViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
-        tableView.backgroundColor = UIColor(244)
-        tableView.separatorColor = UIColor(244)
+        tableView.backgroundColor = UIColor(240)
+        tableView.separatorColor = UIColor(240)
         tableView.register(SettingItemCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = self
         tableView.delegate = self

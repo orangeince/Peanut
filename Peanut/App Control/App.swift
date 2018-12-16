@@ -50,9 +50,9 @@ final class App {
     }
     
     func setupTheme() {
-        UITabBar.appearance().tintColor = .black
-        UINavigationBar.appearance().tintColor = .black
-        UIToolbar.appearance().tintColor = .black
+        UITabBar.appearance().tintColor = UIColor.black
+        UINavigationBar.appearance().tintColor = UIColor(103)
+        UIToolbar.appearance().tintColor = UIColor(103)
 //        UINavigationBar.appearance().barTintColor = UIColor.init(40)
 //        UINavigationBar.appearance().titleTextAttributes = [
 //            NSAttributedString.Key.foregroundColor: UIColor.white

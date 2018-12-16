@@ -19,15 +19,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="176" height="164"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHT-jk-oGg">
-                        <rect key="frame" x="58.5" y="67.5" width="59" height="29"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHT-jk-oGg">
+                        <rect key="frame" x="52.5" y="64" width="71" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                         <color key="textColor" red="0.15276160836219788" green="0.15658366680145264" blue="0.17317831516265869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.95716410875320435" green="0.80910027027130127" blue="0.24980723857879639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="HHT-jk-oGg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="6fX-Ls-ZNM"/>
                 <constraint firstItem="HHT-jk-oGg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ukj-Ga-RuG"/>
