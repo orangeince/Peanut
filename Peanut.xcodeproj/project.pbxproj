@@ -82,7 +82,6 @@
 			children = (
 				F516D08121C4F0F800E3B2E7 /* AppDelegate.swift */,
 				F516D08221C4F0F800E3B2E7 /* App.swift */,
-				F57BAC1F21C60C9B009D8F56 /* WordStore.swift */,
 			);
 			path = "App Control";
 			sourceTree = "<group>";
@@ -93,7 +92,6 @@
 				F516D08621C4F19B00E3B2E7 /* CardViewController.swift */,
 				F516D08721C4F19B00E3B2E7 /* WordCardCell.swift */,
 				F516D08821C4F19B00E3B2E7 /* WordCell.swift */,
-				F516D08921C4F19B00E3B2E7 /* Word.swift */,
 				F516D08A21C4F19B00E3B2E7 /* WordCardCell.xib */,
 			);
 			path = Words;
@@ -127,12 +125,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		F516D0A121C4F26D00E3B2E7 /* Components */ = {
+		F516D0A121C4F26D00E3B2E7 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
 				F516D0A221C4F26D00E3B2E7 /* ItemsViewController.swift */,
 			);
-			path = Components;
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		F54E9A2721BCE2900059C631 = {
@@ -157,13 +155,23 @@
 			isa = PBXGroup;
 			children = (
 				F516D08021C4F0F800E3B2E7 /* App Control */,
+				F57BAC2121C60F90009D8F56 /* Data Center */,
 				F516D08521C4F19B00E3B2E7 /* Words */,
 				F516D09021C4F1A800E3B2E7 /* Settings */,
-				F516D0A121C4F26D00E3B2E7 /* Components */,
+				F516D0A121C4F26D00E3B2E7 /* UIComponents */,
 				F516D09E21C4F1B900E3B2E7 /* Extensions */,
 				F516D09121C4F1B100E3B2E7 /* Support Files */,
 			);
 			path = Peanut;
+			sourceTree = "<group>";
+		};
+		F57BAC2121C60F90009D8F56 /* Data Center */ = {
+			isa = PBXGroup;
+			children = (
+				F516D08921C4F19B00E3B2E7 /* Word.swift */,
+				F57BAC1F21C60C9B009D8F56 /* WordStore.swift */,
+			);
+			path = "Data Center";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
