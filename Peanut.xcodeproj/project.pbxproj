@@ -32,6 +32,11 @@
 		F57BAC3621C648BF009D8F56 /* StylePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC3521C648BF009D8F56 /* StylePalette.swift */; };
 		F57BAC3921C6490E009D8F56 /* AssetPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC3821C6490E009D8F56 /* AssetPalette.swift */; };
 		F57BAC3B21C64941009D8F56 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC3A21C64941009D8F56 /* UIImage+Extension.swift */; };
+		F57BAC3D21C65033009D8F56 /* NavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC3C21C65033009D8F56 /* NavigationBarTheme.swift */; };
+		F57BAC3F21C65120009D8F56 /* TabBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC3E21C65120009D8F56 /* TabBarTheme.swift */; };
+		F57BAC4121C652EE009D8F56 /* ToolBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */; };
+		F57BAC4321C6545C009D8F56 /* TableViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */; };
+		F57BAC4521C65542009D8F56 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC4421C65542009D8F56 /* AppTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		F57BAC3521C648BF009D8F56 /* StylePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylePalette.swift; sourceTree = "<group>"; };
 		F57BAC3821C6490E009D8F56 /* AssetPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPalette.swift; sourceTree = "<group>"; };
 		F57BAC3A21C64941009D8F56 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		F57BAC3C21C65033009D8F56 /* NavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTheme.swift; sourceTree = "<group>"; };
+		F57BAC3E21C65120009D8F56 /* TabBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTheme.swift; sourceTree = "<group>"; };
+		F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarTheme.swift; sourceTree = "<group>"; };
+		F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTheme.swift; sourceTree = "<group>"; };
+		F57BAC4421C65542009D8F56 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +209,7 @@
 		F57BAC2221C64159009D8F56 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				F57BAC4421C65542009D8F56 /* AppTheme.swift */,
 				F57BAC2321C64183009D8F56 /* UIAppearance */,
 			);
 			path = Theme;
@@ -207,6 +218,10 @@
 		F57BAC2321C64183009D8F56 /* UIAppearance */ = {
 			isa = PBXGroup;
 			children = (
+				F57BAC3C21C65033009D8F56 /* NavigationBarTheme.swift */,
+				F57BAC3E21C65120009D8F56 /* TabBarTheme.swift */,
+				F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */,
+				F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */,
 			);
 			path = UIAppearance;
 			sourceTree = "<group>";
@@ -392,12 +407,17 @@
 				F516D08321C4F0F800E3B2E7 /* AppDelegate.swift in Sources */,
 				F516D08E21C4F19B00E3B2E7 /* Word.swift in Sources */,
 				F57BAC3621C648BF009D8F56 /* StylePalette.swift in Sources */,
+				F57BAC4521C65542009D8F56 /* AppTheme.swift in Sources */,
 				F516D08B21C4F19B00E3B2E7 /* CardViewController.swift in Sources */,
+				F57BAC4121C652EE009D8F56 /* ToolBarTheme.swift in Sources */,
+				F57BAC3F21C65120009D8F56 /* TabBarTheme.swift in Sources */,
 				F516D0A321C4F26D00E3B2E7 /* ItemsViewController.swift in Sources */,
 				F516D08D21C4F19B00E3B2E7 /* WordCell.swift in Sources */,
 				F57BAC2821C6455D009D8F56 /* ColorPalette.swift in Sources */,
 				F57BAC1E21C5014D009D8F56 /* SettingItemCell.swift in Sources */,
 				F516D0A021C4F1B900E3B2E7 /* Extensions.swift in Sources */,
+				F57BAC3D21C65033009D8F56 /* NavigationBarTheme.swift in Sources */,
+				F57BAC4321C6545C009D8F56 /* TableViewTheme.swift in Sources */,
 				F57BAC2D21C64805009D8F56 /* FontPalette.swift in Sources */,
 				F57BAC1C21C4F51C009D8F56 /* SettingsViewController.swift in Sources */,
 			);

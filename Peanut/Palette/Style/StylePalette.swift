@@ -32,17 +32,23 @@ struct StylePalette: PaletteProtocol {
     
     let barStyle: UIBarStyle
     let barTranslucency: Bool
+    let barBackground: UIImage?
+    let barShadowImage: UIImage?
 
     static let light: StylePalette = .init(
         stageDesign: .light,
         barStyle: .default,
-        barTranslucency: true
+        barTranslucency: false,
+        barBackground: UIImage(),
+        barShadowImage: UIImage()
     )
     
     static let dark: StylePalette = .init(
         stageDesign: .dark,
         barStyle: .black,
-        barTranslucency: true
+        barTranslucency: false,
+        barBackground: UIImage(),
+        barShadowImage: UIImage()
     )
     
     static var debug: StylePalette {

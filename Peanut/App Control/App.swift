@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import Gestalt
 
 final class App {
     var tabBarController: UITabBarController!
     var wordNavigation: UINavigationController!
+    var disposables: [Gestalt.Disposable]?
 
     init(window: UIWindow) {
         let wordsVC = CardViewController(wordStore: WordStore.shared, didSelectedWord: showInterpretation)
@@ -35,37 +37,37 @@ final class App {
         tabBarController.setViewControllers([wordNavigation, settingsNav], animated: false)
         window.rootViewController = tabBarController
         
-        setupApparence()
-        //wordsVC.didSelectedItem = showInterpretation
+        setupTheme()
     }
     
     func showInterpretation(word: Word) {
         let vc = UIReferenceLibraryViewController(term: word.content)
         vc.title = word.content
-        //navigationController.pushViewController(vc, animated: true)
         tabBarController.present(vc, animated: true, completion: nil)
     }
-    func setupApparence() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().isTranslucent = false
-        UIToolbar.appearance().setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
-        UIToolbar.appearance().setShadowImage(UIImage(), forToolbarPosition: .any)
-        UIToolbar.appearance().isTranslucent = false
-        setupTheme()
-    }
+    
+//    func setupApparence() {
+//        UINavigationBar.appearance().isTranslucent = false
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+//        UINavigationBar.appearance().shadowImage = UIImage()
+//        UITabBar.appearance().backgroundImage = UIImage()
+//        UITabBar.appearance().shadowImage = UIImage()
+//        UITabBar.appearance().isTranslucent = false
+//        UIToolbar.appearance().setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
+//        UIToolbar.appearance().setShadowImage(UIImage(), forToolbarPosition: .any)
+//        UIToolbar.appearance().isTranslucent = false
+//        setupTheme()
+//    }
     
     func setupTheme() {
-        UITabBar.appearance().tintColor = UIColor.black
-        UINavigationBar.appearance().tintColor = UIColor(103)
-        UIToolbar.appearance().tintColor = UIColor(103)
-//        UINavigationBar.appearance().barTintColor = UIColor.init(40)
-//        UINavigationBar.appearance().titleTextAttributes = [
-//            NSAttributedString.Key.foregroundColor: UIColor.white
-//        ]
-//        UITabBar.appearance().barTintColor = UIColor(40)
+        typealias Theme = AppTheme
+        ThemeManager.default.theme = Theme.default
+        
+        self.disposables = [
+            UINavigationBar.observe(theme: \Theme.navigationBar) { $0.appearance() },
+            UITabBar.observe(theme: \Theme.tabBar) { $0.appearance() },
+            UITableView.observe(theme: \Theme.tableView) { $0.appearance() },
+            UIToolbar.observe(theme: \Theme.toolBar) { $0.appearance() },
+        ]
     }
 }

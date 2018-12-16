@@ -41,7 +41,7 @@ struct ColorPalette: PaletteProtocol {
             secondary: UIColor(hue: 0.121, saturation: 0.101, brightness: 0.5, alpha: 1), // gray
             complementary: UIColor(hue:0.121, saturation:0.144, brightness:0.793, alpha:1), // light gray
             
-            tint: UIColor(33) // dark
+            tint: UIColor(103) // dark
         )
     )
     
