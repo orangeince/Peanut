@@ -11,6 +11,7 @@ import UIKit
 class SettingItemCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
+        observe(theme: \AppTheme.tableCell)
     }
     
     required init?(coder aDecoder: NSCoder) {

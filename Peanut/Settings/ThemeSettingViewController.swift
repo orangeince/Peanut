@@ -29,6 +29,7 @@ class ThemeSettingViewController: ItemsViewController<ThemeItemCell, AppTheme> {
         didSelectedItem = { theme in
             guard let current = ThemeManager.default.theme as? AppTheme,
                 current != theme else { return }
+            UserDefaults.standard.set(theme == .dark, forKey: "appTheme.isDark")
             ThemeManager.default.theme = theme
         }
         tableView.rowHeight = 56

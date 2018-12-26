@@ -61,8 +61,12 @@ final class App {
     
     func setupTheme() {
         typealias Theme = AppTheme
-        ThemeManager.default.theme = Theme.default
-        
+        if UserDefaults.standard.bool(forKey: "appTheme.isDark") {
+            ThemeManager.default.theme = Theme.dark
+        } else {
+            ThemeManager.default.theme = Theme.default
+        }
+
         self.disposables = [
             UINavigationBar.observe(theme: \Theme.navigationBar) { $0.appearance() },
             UITabBar.observe(theme: \Theme.tabBar) { $0.appearance() },
