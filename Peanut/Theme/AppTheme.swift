@@ -16,6 +16,7 @@ public struct AppTheme: Theme {
     let tableView: TableViewTheme
     let collectionView: CollectionViewTheme
     let appIcon: AppIconTheme
+    let tableCell: TableCellTheme
 
     static let `default`: AppTheme = .light
     
@@ -29,6 +30,7 @@ public struct AppTheme: Theme {
         tableView = .init(palette: palette)
         collectionView = .init(palette: palette)
         appIcon = .init(palette: palette)
+        tableCell = .init(palette: palette)
         self.id = id
     }
 }

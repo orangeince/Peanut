@@ -43,6 +43,7 @@
 		F57BAC4D21C67E0D009D8F56 /* app_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC4C21C67E0D009D8F56 /* app_icon_dark@2x.png */; };
 		F57BAC4F21C67E2C009D8F56 /* app_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC4E21C67E2C009D8F56 /* app_icon_light@2x.png */; };
 		F57BAC5121C67E34009D8F56 /* app_icon_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F57BAC5021C67E34009D8F56 /* app_icon_light@3x.png */; };
+		F5ADCD6721D3CD8A00930C5A /* TableCellTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ADCD6621D3CD8A00930C5A /* TableCellTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		F57BAC4C21C67E0D009D8F56 /* app_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_dark@2x.png"; sourceTree = "<group>"; };
 		F57BAC4E21C67E2C009D8F56 /* app_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_light@2x.png"; sourceTree = "<group>"; };
 		F57BAC5021C67E34009D8F56 /* app_icon_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon_light@3x.png"; sourceTree = "<group>"; };
+		F5ADCD6621D3CD8A00930C5A /* TableCellTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				F57BAC4021C652EE009D8F56 /* ToolBarTheme.swift */,
 				F57BAC4221C6545C009D8F56 /* TableViewTheme.swift */,
 				F57BAC4821C67B46009D8F56 /* AppIconTheme.swift */,
+				F5ADCD6621D3CD8A00930C5A /* TableCellTheme.swift */,
 			);
 			path = UIAppearance;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				F516D08421C4F0F800E3B2E7 /* App.swift in Sources */,
 				F516D08C21C4F19B00E3B2E7 /* WordCardCell.swift in Sources */,
 				F57BAC4721C65CCB009D8F56 /* ThemeSettingViewController.swift in Sources */,
+				F5ADCD6721D3CD8A00930C5A /* TableCellTheme.swift in Sources */,
 				F57BAC2021C60C9B009D8F56 /* WordStore.swift in Sources */,
 				F57BAC2621C642C9009D8F56 /* Palette.swift in Sources */,
 				F57BAC3121C6486F009D8F56 /* SystemFont.swift in Sources */,

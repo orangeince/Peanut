@@ -70,6 +70,6 @@ final class App {
             UICollectionView.observe(theme: \Theme.collectionView) { $0.appearance() },
             UIToolbar.observe(theme: \Theme.toolBar) { $0.appearance() }
         ]
-        UIApplication.shared.observe(theme: \Theme.appIcon)
+        //UIApplication.shared.observe(theme: \Theme.appIcon)
     }
 }

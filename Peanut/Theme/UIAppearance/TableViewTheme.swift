@@ -6,9 +6,7 @@
 //  Copyright © 2018 ShaoZ. All rights reserved.
 //
 
-
 import UIKit
-
 import Gestalt
 
 public struct TableViewTheme: Theme {
