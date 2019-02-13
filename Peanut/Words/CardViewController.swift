@@ -52,6 +52,8 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         //cardSwiper.register(WordCardCell.self, forCellWithReuseIdentifier: "card")
         cardSwiper.register(nib: UINib(nibName: "WordCardCell", bundle: nil), forCellWithReuseIdentifier: "WordCell")
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBtnTapped))
+        
         observe(theme: \AppTheme.collectionView)
     }
     
@@ -69,6 +71,11 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     func didTapCard(verticalCardSwiperView: VerticalCardSwiperView, index: Int) {
         let word = words[index]
         didSelectedWord?(word)
+    }
+    
+    @objc
+    func addBtnTapped() {
+        UIAlertController.show(message: "Not yet implement!", title: "喵")
     }
     
 }

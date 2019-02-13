@@ -20,6 +20,7 @@
 		F516D09B21C4F1B100E3B2E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F516D09521C4F1B100E3B2E7 /* Main.storyboard */; };
 		F516D0A021C4F1B900E3B2E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516D09F21C4F1B900E3B2E7 /* Extensions.swift */; };
 		F516D0A321C4F26D00E3B2E7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516D0A221C4F26D00E3B2E7 /* ItemsViewController.swift */; };
+		F5790CA82214575400431518 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5790CA72214575400431518 /* UIAlertController+.swift */; };
 		F57BAC1C21C4F51C009D8F56 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */; };
 		F57BAC1E21C5014D009D8F56 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */; };
 		F57BAC2021C60C9B009D8F56 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1F21C60C9B009D8F56 /* WordStore.swift */; };
@@ -64,6 +65,7 @@
 		F516D09F21C4F1B900E3B2E7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F516D0A221C4F26D00E3B2E7 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		F54E9A3021BCE2900059C631 /* Peanut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peanut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5790CA72214575400431518 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
 		F57BAC1F21C60C9B009D8F56 /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F516D09F21C4F1B900E3B2E7 /* Extensions.swift */,
 				F57BAC2921C647B4009D8F56 /* UIFont+Extension.swift */,
 				F57BAC3A21C64941009D8F56 /* UIImage+Extension.swift */,
+				F5790CA72214575400431518 /* UIAlertController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				F57BAC3921C6490E009D8F56 /* AssetPalette.swift in Sources */,
 				F57BAC2A21C647B4009D8F56 /* UIFont+Extension.swift in Sources */,
 				F516D08421C4F0F800E3B2E7 /* App.swift in Sources */,
+				F5790CA82214575400431518 /* UIAlertController+.swift in Sources */,
 				F516D08C21C4F19B00E3B2E7 /* WordCardCell.swift in Sources */,
 				F57BAC4721C65CCB009D8F56 /* ThemeSettingViewController.swift in Sources */,
 				F5ADCD6721D3CD8A00930C5A /* TableCellTheme.swift in Sources */,
