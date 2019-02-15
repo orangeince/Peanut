@@ -13,13 +13,26 @@ class WordCardCell: CardCell {
     @IBOutlet weak var wordLabel: UILabel!
     var didTappedInterpretationBtn: (()->())?
 
-    public func setRandomBackgroundColor(){
+    public func setRandomBackgroundColor(isDark: Bool){
+
+        let randomValue: ()->Int = {Int(arc4random() % 256)}
         
-        let randomRed:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let randomGreen:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
-        let randomBlue:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        var red = randomValue()
+        var green = randomValue()
+        var blue = randomValue()
         
-        self.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        let isRightColor = { () -> Bool in
+            let colorValue = CGFloat(red) * 0.299 + CGFloat(green) * 0.578 + CGFloat(blue) * 0.114
+            return isDark ? colorValue >= 192 : colorValue < 192
+        }
+        
+        while !isRightColor() {
+            red = randomValue()
+            green = randomValue()
+            blue = randomValue()
+        }
+
+        self.backgroundColor = UIColor(r: red, g: green, b: blue)
     }
     
     override func layoutSubviews() {

@@ -41,3 +41,11 @@ extension AppTheme: Equatable {
     }
 }
 
+extension ThemeManager {
+    var isDark: Bool {
+        guard let theme = self.theme as? AppTheme else {
+            return false
+        }
+        return theme == .dark
+    }
+}
