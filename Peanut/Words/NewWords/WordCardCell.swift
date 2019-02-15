@@ -11,7 +11,8 @@ import VerticalCardSwiper
 
 class WordCardCell: CardCell {
     @IBOutlet weak var wordLabel: UILabel!
-    
+    var didTappedInterpretationBtn: (()->())?
+
     public func setRandomBackgroundColor(){
         
         let randomRed:CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
@@ -26,4 +27,7 @@ class WordCardCell: CardCell {
         layer.cornerRadius = 8
     }
 
+    @IBAction func detailBtnTapped(_ sender: Any) {
+        didTappedInterpretationBtn?()
+    }
 }

@@ -46,19 +46,6 @@ final class App {
         tabBarController.present(vc, animated: true, completion: nil)
     }
     
-//    func setupApparence() {
-//        UINavigationBar.appearance().isTranslucent = false
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//        UINavigationBar.appearance().shadowImage = UIImage()
-//        UITabBar.appearance().backgroundImage = UIImage()
-//        UITabBar.appearance().shadowImage = UIImage()
-//        UITabBar.appearance().isTranslucent = false
-//        UIToolbar.appearance().setBackgroundImage(UIImage(), forToolbarPosition: .any, barMetrics: .default)
-//        UIToolbar.appearance().setShadowImage(UIImage(), forToolbarPosition: .any)
-//        UIToolbar.appearance().isTranslucent = false
-//        setupTheme()
-//    }
-    
     func setupTheme() {
         typealias Theme = AppTheme
         if UserDefaults.standard.bool(forKey: "appTheme.isDark") {

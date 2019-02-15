@@ -13,31 +13,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WordCell" id="gTV-IL-0wX" customClass="WordCardCell" customModule="Peanut" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="176" height="164"/>
+            <rect key="frame" x="0.0" y="0.0" width="239" height="252"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="176" height="164"/>
+                <rect key="frame" x="0.0" y="0.0" width="239" height="252"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHT-jk-oGg">
-                        <rect key="frame" x="52.5" y="64" width="71" height="36"/>
+                        <rect key="frame" x="84" y="108" width="71" height="36"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                         <color key="textColor" red="0.15276160836219788" green="0.15658366680145264" blue="0.17317831516265869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-NA-SSx" userLabel="detailBtn">
+                        <rect key="frame" x="197" y="210" width="22" height="22"/>
+                        <connections>
+                            <action selector="detailBtnTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Fci-zs-xtR"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="mp0-NA-SSx" secondAttribute="trailing" constant="20" id="3Ed-l2-uPG"/>
                 <constraint firstItem="HHT-jk-oGg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="6fX-Ls-ZNM"/>
+                <constraint firstAttribute="bottom" secondItem="mp0-NA-SSx" secondAttribute="bottom" constant="20" id="R47-Uz-WVT"/>
                 <constraint firstItem="HHT-jk-oGg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ukj-Ga-RuG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="176" height="164"/>
+            <size key="customSize" width="239" height="252"/>
             <connections>
                 <outlet property="wordLabel" destination="HHT-jk-oGg" id="xaN-wA-3di"/>
             </connections>
-            <point key="canvasLocation" x="238.40000000000001" y="172.71364317841082"/>
+            <point key="canvasLocation" x="288.80000000000001" y="212.29385307346328"/>
         </collectionViewCell>
     </objects>
 </document>

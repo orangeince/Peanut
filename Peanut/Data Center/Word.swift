@@ -11,6 +11,23 @@ import Foundation
 struct Word {
     let content: String
     let createdAt: Date
+    var lastModifiedAt: Date = Date()
+    var markTimes: Int = 0
+    
+    init(content: String, createdAt: Date) {
+        self.content = content
+        self.createdAt = createdAt
+    }
+}
+
+extension Word: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(content)
+    }
+    
+    public static func == (lhs: Word, rhs: Word) -> Bool {
+        return lhs.content == rhs.content
+    }
 }
 
 
