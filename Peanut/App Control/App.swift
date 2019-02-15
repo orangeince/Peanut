@@ -16,7 +16,10 @@ final class App {
     var disposables: [Gestalt.Disposable]?
 
     init(window: UIWindow) {
-        let wordsVC = CardViewController(wordStore: WordStore.shared, didSelectedWord: showInterpretation)
+        let cardVC = CardViewController(wordStore: WordStore.shared, didSelectedWord: showInterpretation)
+        let allWordsVC = AllWordsViewController(wordStore: WordStore.shared)
+        let wordsVC = WordsViewController(cardVC: cardVC, allWordsVC: allWordsVC)
+        wordsVC.title = "Words"
         wordNavigation = UINavigationController(rootViewController: wordsVC)
         let wordBar = UITabBarItem(title: nil,
                                    image: UIImage(named: "tab_word_light"),

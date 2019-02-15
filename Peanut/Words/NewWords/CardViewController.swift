@@ -17,14 +17,12 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     }
     let didSelectedWord: ((Word) -> Void)?
     private var cardSwiper: VerticalCardSwiper!
-    private var segment: UISegmentedControl!
 
     init(wordStore: WordStore, didSelectedWord: ((Word) -> Void)?) {
         self.wordStore = wordStore
         self.didSelectedWord = didSelectedWord
         super.init(nibName: nil, bundle: nil)
-        title = "Words"
-        
+
         wordStore.didChangedWords = { [weak self] words in
             guard let `self` = self else {
                 return
@@ -38,15 +36,6 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     }
     
     private func setupSubviews() {
-        segment = UISegmentedControl(items: ["复习", "全部"])
-        segment.translatesAutoresizingMaskIntoConstraints = false
-        segment.selectedSegmentIndex = 0
-        view.addSubview(segment)
-        segment.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16).isActive = true
-        segment.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
-        segment.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
-        segment.heightAnchor.constraint(equalToConstant: 32)
-
         cardSwiper = VerticalCardSwiper()
         //cardSwiper.isSideSwipingEnabled = false
         view.addSubview(cardSwiper)
@@ -55,8 +44,8 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
             item: cardSwiper,
             attribute: .top,
             relatedBy: .equal,
-            toItem: segment,
-            attribute: .bottom,
+            toItem: view,
+            attribute: .top,
             multiplier: 1,
             constant: 0).isActive = true
         NSLayoutConstraint(
@@ -79,13 +68,14 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
             item: cardSwiper,
             attribute: .bottom,
             relatedBy: .equal,
-            toItem: view.safeAreaLayoutGuide,
+            toItem: view,
             attribute: .bottom,
             multiplier: 1,
             constant: 0).isActive = true
         
         cardSwiper.datasource = self
         cardSwiper.delegate = self
+        cardSwiper.topInset = 0
         
         cardSwiper.register(nib: UINib(nibName: "WordCardCell", bundle: nil), forCellWithReuseIdentifier: "WordCell")
         
@@ -96,12 +86,6 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         
         setupSubviews()
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .add,
-            target: self,
-            action: #selector(addBtnTapped)
-        )
-        
         observe(theme: \AppTheme.collectionView)
     }
     
@@ -124,13 +108,6 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
         return words.count
     }
-    
-    @objc
-    func addBtnTapped() {
-        cardSwiper.reloadData()
-        //UIAlertController.show(message: "Not yet implement!", title: "喵")
-    }
-    
 }
 
 extension CardViewController: Themeable {

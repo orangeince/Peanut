@@ -21,6 +21,7 @@
 		F516D0A321C4F26D00E3B2E7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516D0A221C4F26D00E3B2E7 /* ItemsViewController.swift */; };
 		F5790CA82214575400431518 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5790CA72214575400431518 /* UIAlertController+.swift */; };
 		F5790CAC221556C200431518 /* AllWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5790CAB221556C200431518 /* AllWordsViewController.swift */; };
+		F5790CAE2216BFA900431518 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5790CAD2216BFA900431518 /* WordsViewController.swift */; };
 		F57BAC1C21C4F51C009D8F56 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */; };
 		F57BAC1E21C5014D009D8F56 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */; };
 		F57BAC2021C60C9B009D8F56 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BAC1F21C60C9B009D8F56 /* WordStore.swift */; };
@@ -66,6 +67,7 @@
 		F54E9A3021BCE2900059C631 /* Peanut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peanut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5790CA72214575400431518 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		F5790CAB221556C200431518 /* AllWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWordsViewController.swift; sourceTree = "<group>"; };
+		F5790CAD2216BFA900431518 /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
 		F57BAC1B21C4F51C009D8F56 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F57BAC1D21C5014D009D8F56 /* SettingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItemCell.swift; sourceTree = "<group>"; };
 		F57BAC1F21C60C9B009D8F56 /* WordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				F516D08621C4F19B00E3B2E7 /* CardViewController.swift */,
 				F516D08721C4F19B00E3B2E7 /* WordCardCell.swift */,
 				F516D08A21C4F19B00E3B2E7 /* WordCardCell.xib */,
+				F5790CAD2216BFA900431518 /* WordsViewController.swift */,
 			);
 			path = NewWords;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				F57BAC2621C642C9009D8F56 /* Palette.swift in Sources */,
 				F57BAC3121C6486F009D8F56 /* SystemFont.swift in Sources */,
 				F57BAC3B21C64941009D8F56 /* UIImage+Extension.swift in Sources */,
+				F5790CAE2216BFA900431518 /* WordsViewController.swift in Sources */,
 				F57BAC2F21C64848009D8F56 /* BlokkNeueFont.swift in Sources */,
 				F516D08321C4F0F800E3B2E7 /* AppDelegate.swift in Sources */,
 				F516D08E21C4F19B00E3B2E7 /* Word.swift in Sources */,
