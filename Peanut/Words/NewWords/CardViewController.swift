@@ -17,6 +17,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     }
     let didSelectedWord: ((Word) -> Void)?
     private var cardSwiper: VerticalCardSwiper!
+    private lazy var emptyView = EmptyView()
 
     init(wordStore: WordStore, didSelectedWord: ((Word) -> Void)?) {
         self.wordStore = wordStore
@@ -79,12 +80,19 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         
         cardSwiper.register(nib: UINib(nibName: "WordCardCell", bundle: nil), forCellWithReuseIdentifier: "WordCell")
         
+        view.addSubview(emptyView)
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        emptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        emptyView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        emptyView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSubviews()
+        emptyView.isHidden = !words.isEmpty
 
         observe(theme: \AppTheme.collectionView)
     }
@@ -103,10 +111,46 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
         let word = words[index]
         wordStore.acquire(word: word)
+        emptyView.isHidden = !words.isEmpty
     }
     
     func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
         return words.count
+    }
+}
+
+extension CardViewController {
+    fileprivate class EmptyView: UIView {
+        private let imageView = UIImageView(image: UIImage(named: "icon_empty"))
+        private let titleLabel = UILabel()
+        
+        init() {
+            super.init(frame: .zero)
+            setupSubviews()
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+        private func setupSubviews() {
+            addSubview(imageView)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+            imageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -120).isActive = true
+            imageView.heightAnchor.constraint(equalToConstant: 160).isActive = true
+            imageView.widthAnchor.constraint(equalToConstant: 160).isActive = true
+            
+            addSubview(titleLabel)
+            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+            titleLabel.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 12)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16).isActive = true
+            // TODO: 空页面的标题应该是根据上下文配置的
+            titleLabel.text = "没有需要复习的单词"
+            titleLabel.font = UIFont.systemFont(ofSize: 16)
+            titleLabel.textColor = UIColor(r: 102, g: 102, b: 102)
+        }
     }
 }
 

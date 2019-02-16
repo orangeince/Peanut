@@ -25,8 +25,13 @@
                         <color key="textColor" red="0.15276160836219788" green="0.15658366680145264" blue="0.17317831516265869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-NA-SSx" userLabel="detailBtn">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp0-NA-SSx" userLabel="detailBtn">
                         <rect key="frame" x="197" y="210" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="THj-Ah-mFE"/>
+                            <constraint firstAttribute="height" constant="22" id="vIE-qc-onC"/>
+                        </constraints>
+                        <state key="normal" image="icon_questionmark"/>
                         <connections>
                             <action selector="detailBtnTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Fci-zs-xtR"/>
                         </connections>
@@ -48,4 +53,7 @@
             <point key="canvasLocation" x="288.80000000000001" y="212.29385307346328"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icon_questionmark" width="178.66667175292969" height="178.66667175292969"/>
+    </resources>
 </document>
