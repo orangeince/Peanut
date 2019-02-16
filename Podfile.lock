@@ -1,20 +1,24 @@
 PODS:
   - Gestalt (2.0.0)
+  - SnapKit (4.0.1)
   - VerticalCardSwiper (0.1.0-beta6)
 
 DEPENDENCIES:
   - Gestalt (~> 2.0.0)
+  - SnapKit (~> 4.0.0)
   - VerticalCardSwiper (= 0.1.0-beta6)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Gestalt
+    - SnapKit
     - VerticalCardSwiper
 
 SPEC CHECKSUMS:
   Gestalt: 6b1c871de9fc923fadabc3c2973ed2d3b2ecd1e5
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   VerticalCardSwiper: abf970a63426e6fb77bcc55d3ca589ff54d0ef00
 
-PODFILE CHECKSUM: 313b460f74933cf512312cf5996d5f5c04c3ce3d
+PODFILE CHECKSUM: 0524dc4f3a3f615e8c418e74febd94fa50a7bf19
 
 COCOAPODS: 1.6.0.beta.2

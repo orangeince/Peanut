@@ -399,6 +399,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Peanut/Pods-Peanut-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Gestalt/Gestalt.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/VerticalCardSwiper/VerticalCardSwiper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -406,6 +407,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gestalt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerticalCardSwiper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

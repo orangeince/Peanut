@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class AllWordsViewController: UIViewController {
     private var tableView = UITableView()
@@ -46,27 +47,78 @@ extension AllWordsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        return 96
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AllWordCell
         let word = words[indexPath.row]
-        cell.textLabel?.text = word.content
-        cell.detailTextLabel?.text = word.createdAt.formattedString()
-        cell.accessoryType = .disclosureIndicator
-        cell.selectionStyle = .none
+        cell.setup(content: word.content)
         return cell
     }
 }
 
 class AllWordCell: UITableViewCell {
+    private var cardBg: UIView!
+    private var contentLabel: UILabel!
+    private var dateLabel: UILabel!
+    private var detailBtn: UIButton!
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-        textLabel?.font = UIFont.systemFont(ofSize: 20)
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupSubviews()
+        selectionStyle = .none
+    }
+    
+    private func setupSubviews() {
+        backgroundColor = .clear
+        cardBg = UIView()
+        cardBg.backgroundColor = .white
+        addSubview(cardBg)
+        cardBg.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16))
+        }
+        cardBg.layer.cornerRadius = 8
+        cardBg.clipsToBounds = true
+        
+        contentLabel = UILabel()
+        contentLabel.font = UIFont.systemFont(ofSize: 22)
+        contentLabel.textColor = .black
+        cardBg.addSubview(contentLabel)
+        contentLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
+
+//        dateLabel = UILabel()
+//        dateLabel.font = UIFont.systemFont(ofSize: 12)
+//        dateLabel.textColor = UIColor.lightGray
+//        cardBg.addSubview(dateLabel)
+//        dateLabel.snp.makeConstraints { (make) in
+//            make.leading.equalTo(contentLabel.snp.leading)
+//            make.top.equalTo(contentLabel.snp.bottom).offset(4)
+//        }
+//
+//        detailBtn = UIButton()
+//        detailBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+//        detailBtn.backgroundColor = .lightGray
+//        detailBtn.layer.cornerRadius = 12
+//        detailBtn.clipsToBounds = true
+//        cardBg.addSubview(detailBtn)
+//        detailBtn.snp.makeConstraints { (make) in
+//            make.centerY.equalToSuperview()
+//            make.trailing.equalToSuperview().inset(12)
+//            make.height.equalTo(24)
+//            make.width.equalTo(44)
+//        }
+//        detailBtn.setTitle("释义", for: .normal)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setup(content: String) {
+        contentLabel.text = content
     }
 }
