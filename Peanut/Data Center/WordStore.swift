@@ -33,4 +33,15 @@ class WordStore {
             learnWords.remove(at: idx)
         }
     }
+    
+    func fetchWords(sortedBy type: WordSortedType) -> [Word] {
+        return words.sorted(by: {
+            return type == .char ? $0.content < $1.content : $0.createdAt < $1.createdAt
+        })
+    }
+}
+
+enum WordSortedType: Int {
+    case char
+    case modified
 }

@@ -30,7 +30,6 @@ extension Word: Hashable {
     }
 }
 
-
 extension Date {
     func formattedString(_ formatter: String = "MM-dd HH:mm") -> String {
         let dateFormatter = DateFormatter()

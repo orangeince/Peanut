@@ -10,10 +10,19 @@ import UIKit
 import SnapKit
 
 class AllWordsViewController: UIViewController {
-    private var tableView = UITableView()
+    lazy private var tableView = UITableView()
     private let wordStore: WordStore
+    lazy private var searchBtn = UIButton()
+    lazy private var sortBtn = UIButton()
     var words: [Word] {
-        return wordStore.words
+        return wordStore.fetchWords(sortedBy: sortedType)
+    }
+    var sortedType: WordSortedType = .modified {
+        didSet {
+            guard oldValue != sortedType else { return }
+            sortBtn.setImage(sortedType.icon, for: .normal)
+            tableView.reloadData()
+        }
     }
     
     init(wordStore: WordStore) {
@@ -25,19 +34,48 @@ class AllWordsViewController: UIViewController {
         fatalError("not implement init?")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    private func setupSubviews() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
+        tableView.snp.makeConstraints { (make) in
+            make.leading.top.trailing.equalToSuperview()
+            make.bottom.equalToSuperview().inset(60)
+        }
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(AllWordCell.self, forCellReuseIdentifier: "Cell")
+        
+        view.addSubview(sortBtn)
+        sortBtn.snp.makeConstraints { (make) in
+            make.top.equalTo(tableView.snp.bottom).offset(12)
+            make.height.width.equalTo(24)
+            make.trailing.equalToSuperview().inset(16)
+        }
+        sortBtn.addTarget(self, action: #selector(sortBtnTapped), for: .touchUpInside)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSubviews()
+        sortedType = .char
+    }
+    
+    @objc
+    private func sortBtnTapped() {
+        let alert = UIAlertController(title: "排序规则", message: "支持两种排序方法：1. 按首字母降序 2. 按修改时间降序", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: (sortedType == .char ? "保持" : "更改为") + "首字母降序",
+                                      style: .default,
+                                      handler: { [unowned self] _ in
+                                         self.sortedType = .char
+                                      }))
+        alert.addAction(UIAlertAction(title: (sortedType == .modified ? "保持" : "更改为") + "修改时间降序",
+                                      style: .default,
+                                      handler: { [unowned self] _ in
+                                        self.sortedType = .modified
+                                     }))
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -55,6 +93,17 @@ extension AllWordsViewController: UITableViewDelegate, UITableViewDataSource {
         let word = words[indexPath.row]
         cell.setup(content: word.content)
         return cell
+    }
+}
+
+extension WordSortedType {
+    var icon: UIImage? {
+        switch self {
+        case .char:
+            return UIImage(named: "icon_sort_by_char")
+        case .modified:
+            return UIImage(named: "icon_sort_by_modified")
+        }
     }
 }
 
