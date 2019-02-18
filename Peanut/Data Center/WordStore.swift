@@ -15,7 +15,11 @@ class WordStore {
     private(set) var words: [Word] = []
     lazy private(set) var learnWords: [Word] = Array(words.prefix(5))
     init() {
-        // TODO: do something
+        // Maybe should merge from iCloud
+        loadWords()
+    }
+    
+    func loadWords() {
         words = [
             Word(content: "peanut", createdAt: Date()),
             Word(content: "acquired", createdAt: Date()),
@@ -27,17 +31,17 @@ class WordStore {
             Word(content: "diagram", createdAt: Date()),
         ]
     }
+
+    func fetchWords(sortedBy type: WordSortedType) -> [Word] {
+        return words.sorted(by: {
+            return type == .char ? $0.content < $1.content : $0.createdAt < $1.createdAt
+        })
+    }
     
     func acquire(word: Word) {
         if let idx = learnWords.index(of: word) {
             learnWords.remove(at: idx)
         }
-    }
-    
-    func fetchWords(sortedBy type: WordSortedType) -> [Word] {
-        return words.sorted(by: {
-            return type == .char ? $0.content < $1.content : $0.createdAt < $1.createdAt
-        })
     }
 }
 
