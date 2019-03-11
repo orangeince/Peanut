@@ -18,6 +18,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
     let didSelectedWord: ((Word) -> Void)?
     private var cardSwiper: VerticalCardSwiper!
     private lazy var emptyView = EmptyView()
+    private var indicator: UIActivityIndicatorView!
 
     init(wordStore: WordStore, didSelectedWord: ((Word) -> Void)?) {
         self.wordStore = wordStore
@@ -86,6 +87,18 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         emptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         emptyView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         emptyView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        indicator = UIActivityIndicatorView(style: .whiteLarge)
+        view.addSubview(indicator)
+        indicator.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(44)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        indicator?.stopAnimating()
     }
     
     override func viewDidLoad() {
@@ -104,6 +117,7 @@ class CardViewController: UIViewController, VerticalCardSwiperDatasource, Vertic
         cardCell.wordLabel.text = word.content
         cardCell.didTappedInterpretationBtn = { [weak self] in
             self?.didSelectedWord?(word)
+            self?.indicator.startAnimating()
         }
         return cardCell
     }
